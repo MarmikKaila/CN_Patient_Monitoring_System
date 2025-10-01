@@ -1,0 +1,102 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin: 0;
+  background: #0b132b;
+  color: #e0e6f0;
+}
+
+header, footer {
+  padding: 12px 16px;
+  background: #1c2541;
+}
+
+main {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+#status {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+section {
+  background: #3a506b;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #1c2541;
+}
+
+tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Alerts Styling */
+#alerts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+#alerts li {
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: #1c2541;
+}
+
+#alerts li.sev-low {
+  border-left: 4px solid #4caf50;
+}
+
+#alerts li.sev-medium {
+  border-left: 4px solid #ffc107;
+}
+
+#alerts li.sev-high {
+  border-left: 4px solid #f44336;
+}
+
+/* Patient Chart Styling */
+.patient-chart {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #22273a;
+  border-radius: 8px;
+  color: #e0e6f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Chart canvas takes full width */
+.patient-chart canvas {
+  width: 100% !important;
+  height: 300px !important;
+  display: block;
+}
