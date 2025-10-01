@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CN Patient Monitor</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1>CN Patient Monitor</h1>
+      <div id="status">Connecting...</div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Patients</h2>
+        <table id="patients-table">
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Heart Rate</th>
+              <th>SpO2</th>
+              <th>BP (Sys/Dia)</th>
+              <th>Temp</th>
+              <th>Resp</th>
+              <th>Last Update</th>
+            </tr>
+          </thead>
+          <tbody id="patients-body"></tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Real-Time Patient Vitals Graphs</h2>
+        <div id="charts-container"></div>
+      </section>
+
+      <section>
+        <h2>Alerts</h2>
+        <ul id="alerts"></ul>
+      </section>
+
+      <section>
+        <h2>Network Concepts Demonstration</h2>
+        <div id="cn-concepts">
+          <p><strong>IP Addressing and Ports:</strong>
+            UDP port <span id="udp-port">...</span>,
+            TCP port <span id="tcp-port">...</span>,
+            WebSocket port <span id="ws-port">...</span>
+          </p>
+          <p><strong>UDP Packets Received:</strong> <span id="udp-count">0</span></p>
+          <p><strong>TCP Connections:</strong> <span id="tcp-count">0</span></p>
+          <p><strong>Description:</strong> This system demonstrates UDP for low overhead telemetry (best-effort), TCP for reliable alerts, and WebSocket for real-time updates.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>UDP: telemetry | TCP: alerts | WebSocket: real-time updates</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
